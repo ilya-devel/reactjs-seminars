@@ -1,0 +1,50 @@
+.newCommentBlock
+    display: flex
+    flex-direction: column
+    gap: 3px
+
+    #newComment
+        border: 1px dotted grey
+        border-radius: 5px
+
+    .subheader
+        font-size: 18px
+        font-weight: 700
+        color: grey
+        text-align: left
+
+    .addNewComment
+        background-color: grey
+
+
+
+
+.commentsBlock
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+    .comment
+        border: 1px dotted grey
+        border-radius: 5px
+        padding: 5px
+        background-color: #f2dda8
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        text-align: left
+
+        .closeIcon
+            display: flex
+            padding-left: 5px
+            align-items: center
+
+            svg
+                max-width: 25px
+                min-width: 25px
+
+
+            &:hover
+                fill: red
