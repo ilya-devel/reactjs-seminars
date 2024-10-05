@@ -1,0 +1,39 @@
+@import "./fonts.css"
+@import 'variables'
+@import 'mixins'
+
+*
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Lato', sans-serif
+
+summary
+    display: block
+
+summary::-webkit-details-marker
+    display: none
+
+a
+    text-decoration: none
+
+    &:hover
+        color: $colorSelectSite
+
+.center
+    padding-left: calc( 50% - 570px )
+    padding-right: calc( 50% - 570px )
+
+@media (max-width: 768px)
+
+    .center
+        max-width: 768px
+        padding-left: 16px
+        padding-right: 16px
+
+@media (max-width: 375px)
+    .center
+        max-width: 375px
+        padding-left: 8px
+        padding-right: 8px

@@ -1,0 +1,12 @@
+@use "sass:math";
+
+$colorSelectSite: #F16D7F;
+$defNavMenuItemColor: #E8E8E8;
+$backBlock: #222222;
+$colorText: #000;
+$widthSite: 1140px;
+$gapGrid: 30px;
+$gapNavMenuItems: 41px;
+// $thirdSite: calc($widthSite - $gapGrid * 2) /3 ;
+$thirdSite: math.div(calc($widthSite - $gapGrid * 2), 3);
+$widthMenuBurger: 232px;

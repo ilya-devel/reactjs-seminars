@@ -1,0 +1,116 @@
+@import '../../variables'
+
+.our_brand_demo
+    background: rgb(241, 228, 230)
+
+    &__section
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // align-items: center;
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        max-width: 1600px
+        padding-left: calc(50% - 1600px / 2)
+        padding-right: calc(50% - 1600px / 2)
+
+        &__image_layout
+            width: 50%
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
+            align-items: left
+
+        &__image
+            width: 100%
+
+        &__text
+            border-left: 12px solid #F16D7F
+            padding-left: 16px
+            margin-left: 64px
+            text-transform: uppercase
+            text-align: left
+            font-size: 37px
+
+            &__bold
+                font-weight: 900
+
+            &__medium
+                font-weight: 700
+
+            &__select
+                color: $colorSelectSite
+
+.product_section
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-top: 30px
+
+    &__title
+        font-size: 30px
+        color: $backBlock
+
+    &__description
+        font-size: 14px
+        color: #9F9F9F
+        padding-bottom: 50px
+
+.products-box
+
+    &__btn_all
+        margin-top: 48px
+        background-color: #FFFFFF
+        border: none
+        border: 1px solid #F26376
+        padding: 15px 39px
+        color: #F26376
+        font-size: 16px
+        font-weight: 400
+
+        &:hover
+            background-color: #F26376
+            color: #FFFFFF
+
+@media ( max-width: 768px )
+    .our_brand_demo
+        &__section
+            justify-content: center
+
+            &__text
+                margin-left: 40px
+
+                &__bold
+                    font-size: 44px
+                    font-weight: 900
+
+                &__medium
+                    font-size: 24px
+
+@media ( max-width: 375px )
+    .our_brand_demo
+        &__section
+            height: 363px
+
+            &__image_layout
+                display: none
+
+            &__text
+                &__bold
+                    font-size: 38px
+                    line-height: 46px
+
+                &__medium
+                    font-size: 20px
+                    line-height: 24px
+
+    .product_section
+        &__description
+            padding-bottom: 65px
+
+    .products-box
+
+        &__btn_all
+            margin-top: 40px
+            margin-bottom: 32px

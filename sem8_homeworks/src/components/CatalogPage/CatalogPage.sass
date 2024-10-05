@@ -1,0 +1,195 @@
+@import "../../variables"
+
+.filter-sort
+    height: 102px
+    // position: relative;
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: $gapGrid
+
+    &__filter-layout
+        position: relative
+
+    &__sort-layout
+        position: relative
+
+.filter
+    padding: 13px 16px 16px
+    width: 360px
+    position: absolute
+    top: 39px
+    box-sizing: border-box
+    z-index: 10
+
+    &__summary
+        display: flex
+        align-items: center
+        gap: 11px
+
+        &:hover &__heading
+            color: $colorSelectSite
+
+        &:hover path
+            fill: $colorSelectSite
+
+    &[open]
+        background: #FFF
+        box-shadow: 6px 3px 35px rgba(0, 0, 0, 0.21)
+
+    &[open] &__heading
+        color: $colorSelectSite
+
+    &[open] path
+        fill: $colorSelectSite
+
+    &__heading
+        color: $colorText
+        font-size: 14px
+        font-weight: 600
+        line-height: 17px
+        font-style: normal
+
+    &__summary_sub
+        padding-left: 12px
+        padding-top: 8px
+        padding-bottom: 10px
+        border-left: 5px solid #EF5B70
+        border-bottom: 1px solid rgb(235, 235, 235)
+
+    &__heading_sub
+        color: #6F6E6E
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        font-style: normal
+
+    &__item
+        margin-top: 16px
+
+        &[open] &__heading_sub
+            color: $colorSelectSite
+
+    &__link_box
+        display: flex
+        flex-direction: column
+        gap: 11px
+        padding-top: 24px
+        padding-bottom: 24px
+        padding-left: 17px
+
+    &__link
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #6F6E6E
+
+        &:hover
+            color: $colorSelectSite
+
+.sort
+    display: flex
+    position: absolute
+    gap: 28px
+    top: 39px
+    left: calc(50% - $widthSite / 2 + 390px)
+
+.sort_filter
+    padding-top: 12px
+    position: relative
+
+    &__name
+        color: #6F6E6E
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+
+    &__summary
+        display: flex
+        gap: 10px
+        // justify-content: center;
+        align-items: center
+
+        &:hover &_filter__name
+            color: $colorSelectSite
+
+        &:hover path
+            fill: $colorSelectSite
+
+        & path
+            fill: #6F6E6E
+
+    &__box
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21)
+        background: rgb(255, 255, 255)
+        padding: 7px 30px 11px 9px
+        display: flex
+        flex-direction: column
+        gap: 6px
+        position: absolute
+        left: -9px
+        top: 32px
+        z-index: 10
+
+    &__check
+        display: flex
+        gap: 9px
+        align-items: center
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+        color: #6F6E6E
+
+.page_control
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 48px
+
+    &__pages
+        border: 1px solid #EBEBEB
+        width: 284px
+        height: 44px
+        border-radius: 3px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-left: 15px
+        padding-right: 15px
+        gap: 15px
+        font-weight: 300
+        font-size: 13px
+
+    &__page
+        font-weight: 300
+        font-size: 16px
+        color: #5D5D5D
+
+.page_active
+    color: $colorSelectSite
+
+@media (max-width: 768px)
+    .filter-sort
+        height: 51px
+        grid-template-columns: repeat(2, 1fr)
+
+        .filter
+            top: 11px
+
+        .sort
+            top: 11px
+            left: calc(100% - 295px)
+
+@media (max-width: 375px)
+    .filter-sort
+        display: flex
+        justify-content: space-between
+
+        .sort
+            gap: 24px
+            left: calc(100% - 264px)
+
+    .sort_filter
+        &__name
+            font-size: 12px

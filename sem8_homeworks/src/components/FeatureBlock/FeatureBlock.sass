@@ -1,0 +1,50 @@
+@import '../../variables'
+
+.background_section
+    background-color: $backBlock
+
+.feature
+    margin-top: 95px
+    display: flex
+    gap: 30px
+    padding-top: 103px
+    padding-bottom: 103px
+    text-align: center
+
+    &__text-mini
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 16px
+        color: #FBFBFB
+
+        .text-mini
+            &__icon
+                width: 40px
+                height: 40px
+                margin-bottom: 3px
+
+            &__title
+                font-size: 20px
+                font-weight: 400
+
+            &__desc
+                font-size: 14px
+                font-weight: 300
+
+                opacity: 0.67
+                padding: 0 30px
+
+@media ( max-width: 768px )
+    .feature
+        flex-direction: column
+        align-items: center
+        padding-top: 48px
+        gap: 48px
+
+        &__text-mini
+            width: $thirdSite
+
+@media (max-width: 375px)
+    .feature
+        margin-top: 64px

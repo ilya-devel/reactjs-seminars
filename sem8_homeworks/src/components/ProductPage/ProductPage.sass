@@ -1,0 +1,202 @@
+@import '../../variables'
+
+.about_product
+    position: relative
+    height: 1313px
+
+    &__photos
+        display: flex
+        justify-content: center
+        height: 777px
+        background-color: #F7F7F7
+        position: relative
+
+        &__left
+            position: absolute
+            top: 365px
+            left: 0
+            width: 47px
+            height: 47px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 0
+            background-color: #2A2A2A26
+
+            & path
+                fill: #000
+
+            &:hover path
+                fill: $colorSelectSite
+
+        &__right
+            position: absolute
+            top: 365px
+            right: 0
+            width: 47px
+            height: 47px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 0
+            background-color: #2A2A2A26
+
+            & path
+                fill: #000
+
+            &:hover path
+                fill: $colorSelectSite
+
+    &__description
+        display: flex
+        flex-direction: column
+        align-items: center
+        // justify-content: center;
+        position: absolute
+        width: $widthSite
+        top: 712px
+        z-index: 10
+        margin-left: calc(50% - $widthSite/2)
+        margin-right: calc(50% - $widthSite/2)
+        border: 1px solid #EAEAEA
+        background-color: #FFF
+
+        &__series
+            margin-top: 65px
+            color: $colorSelectSite
+            font-size: 14px
+            font-weight: 400
+            line-height: 16.8px
+
+        &__bold_line
+            width: 63px
+            height: 3px
+            background-color: #EF5B70
+            margin-top: 12px
+            margin-left: 42px
+            margin-right: 42px
+
+        &__title
+            font-size: 18px
+            font-weight: 300
+            padding-top: 12px
+            padding-bottom: 16px
+
+        &__about
+            padding: 32px 292px
+            font-size: 14px
+            font-weight: 300
+            text-align: center
+            color: #5E5E5E
+
+        &__price
+            color: #EF5B70
+            font-size: 24px
+            font-weight: 300
+
+        &__line
+            height: 1px
+            width: 641px
+            margin: 64px 249px
+            background-color: #EAEAEA
+
+        &__chooses
+            display: flex
+            gap: 23px
+            align-items: center
+            justify-content: center
+
+            &__chose__header
+
+                display: flex
+                align-items: center
+                gap: 9px
+
+                &__title
+                    color: #6F6E6E
+                    font-size: 14px
+                    font-weight: 400
+
+                & path
+                    fill: #6F6E6E
+
+        &__btn_add_to_cart
+            margin-top: 48px
+            margin-bottom: 64px
+            width: 212px
+            padding-top: 12px
+            padding-bottom: 12px
+            padding-left: 24px
+            display: flex
+            justify-content: flex-start
+            gap: 23px
+            align-items: center
+            border-radius: 0
+            color: #EF5B70
+            background-color: #FFF
+            border: 1px solid #EF5B70
+            font-weight: 400
+            font-size: 16px
+
+            &:hover
+                background-color: #EF5B70
+                color: #FFF
+
+                path
+                    fill: #FFF
+
+.empty_section
+    &__h130
+        height: 130px
+
+    &__h100
+        height: 100px
+
+@media (max-width: 768px)
+    .about_product
+        &__description
+            width: 100%
+            margin: 0
+            border: none
+            border-bottom: 1px solid #EAEAEA
+
+            &__about
+                padding: 32px 107px
+
+@media (max-width: 375px)
+    .about_product
+        &__photos
+            &__layout
+                width: 375px
+                display: flex
+                align-items: center
+
+                & svg
+                    height: 624px
+
+        &__description
+            &__about
+                padding: 32px 25px
+
+            &__line
+                margin-top: 32px
+                margin-bottom: 49px
+                margin-left: auto
+                margin-right: auto
+                width: 175px
+
+            &__chooses
+                &__chose
+                    &__header
+                        &__title
+                            font-size: 10px
+
+            &__btn_add_to_cart
+                margin: 64px auto
+
+    .empty_section
+        &__h100
+            height: 34px
+
+        &__h130
+            height: 64px

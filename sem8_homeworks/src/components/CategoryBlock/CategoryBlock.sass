@@ -1,0 +1,66 @@
+@import '../../variables'
+
+.categories
+    padding-top: 65px
+    padding-bottom: 65px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+
+.category
+    position: relative
+    text-transform: uppercase
+
+    &__img
+        /* background-color: rgba(33, 22, 22, 0.70); */
+        width: 100%
+        height: 100%
+
+    &__absolute_central
+        position: absolute
+        display: flex
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        width: 100%
+        height: 100%
+        align-content: center
+        flex-direction: column
+        justify-content: center
+        gap: 3px
+
+    &__layout
+        background-color: rgba(33, 22, 22, 0.70)
+        width: 100%
+        height: 100%
+
+    &__full_width
+        grid-column: 1/4
+
+    &__main_txt
+        color: #FFFFFF
+        font-size: 16px
+        font-weight: 400
+
+    &__select_txt
+        color: $colorSelectSite
+        font-size: 24px
+        font-weight: 700
+
+@media ( max-width: 768px )
+    .categories
+        gap: 20px
+        padding-top: 20px
+        padding-bottom: 125px
+
+@media ( max-width: 375px )
+    .categories
+        margin-top: 44px
+        gap: 32px
+        padding-bottom: 34px
+        grid-template-columns: repeat(1, 1fr)
+
+    .category
+        &__full_width
+            grid-column: 1

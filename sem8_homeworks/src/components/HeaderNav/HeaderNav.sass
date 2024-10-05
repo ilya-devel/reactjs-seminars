@@ -1,0 +1,101 @@
+.header
+    background-color: #222222
+    padding-top: 17px
+    padding-bottom: 17px
+
+    &__nav
+        display: flex
+        justify-content: space-between
+
+        &__left
+            display: flex
+            align-items: center
+            gap: 41px
+
+            &__search
+                fill: #E8E8E8
+
+            &__search:hover
+                fill: #F16D7F
+
+        &__right
+            display: flex
+            align-items: center
+            gap: 41px
+            position: relative
+
+            &__menu
+                fill: #E8E8E8
+
+                &:hover
+                    fill: #F16D7F
+
+                &__list
+                    position: fixed
+                    top: 75px
+                    right: 0
+                    background-color: #FFFFFF
+                    box-shadow: -7px 7px 5px 5px #F1E4E6
+                    padding: 32px 0 32px 33px
+                    width: 199px
+                    z-index: 10
+
+                    &__title
+                        font-weight: 700
+                        font-size: 14px
+                        text-transform: uppercase
+                        padding: 4px 0
+
+                    &__section__name
+                        font-weight: 400px
+                        font-size: 14px
+                        text-transform: uppercase
+                        color: #F16D7F
+                        margin-top: 20px
+
+                    &__section__menu
+                        display: flex
+                        flex-direction: column
+                        gap: 11px
+                        margin-top: 12px
+
+                    &__section__menu__item
+                        padding-left: 21px
+                        text-decoration: none
+                        color: #6F6E6E
+
+            &__profile
+                fill: #E8E8E8
+
+            &__profile:hover
+                fill: #F16D7F
+
+            &__cart
+                position: relative
+                fill: #E8E8E8
+
+                &__count
+                    position: absolute
+                    top: 0
+                    right: 0
+                    width: 19px
+                    height: 19px
+                    border-radius: 10px
+                    background-color: #F16D7F
+                    color: #E8E8E8
+                    font-size: 12px
+                    text-align: center
+                    align-content: center
+
+
+            &__cart:hover
+                fill: #F16D7F
+
+#burger
+    position: absolute
+    left: -9999999px
+    visibility: hidden
+
+    &:checked ~ .header__nav__right__menu__list
+        display: none
+        right: -232px
